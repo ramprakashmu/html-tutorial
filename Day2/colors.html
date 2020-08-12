@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+    <!--External Styling-->
+    <link href="colors.css" rel="stylesheet">
+</head>
+<!--Internal Styling-->
+<style>
+    body {
+        background-color: cadetblue;
+    }
+</style>
+<!--Inline styling-->
+
+<body style="background-color: white">
+    <h1>Colors Demo Page</h1>
+    <p>This is entirely about coloring html elements.</p>
+    <!--
+        <p style="background-color:Tomato;">Hello HTMl</p>
+<h1 style="color:Tomato;">Hello World</h1>
+<h1 style="border:2px solid Tomato;">Hello World</h1>
+    -->
+
+    <!--
+        By using class and id, we can provide styling for that div.
+    -->
+    <br>
+    <br>
+    <div class="containerOneDiv">
+        Its a container one.
+    </div>
+    <br>
+    <br>
+    <div id="containerTwoDiv">
+        Its a container two.
+    </div>
+    <br>
+    <br>
+    <div class="containerOneDiv">
+        Its a container one - re userd class from.
+    </div>
+
+    <!--Differenrt ways of giving color codes.-->
+    <h1 style="background-color:rgb(199, 90, 63);">RGB</h1>
+    <h1 style="background-color:#61352e;">HEX</h1>
+
+    <h1 style="background-color:hsl(229, 90%, 47%);">HSL</h1>
+    <h1 style="background-color:rgba(255, 19, 71, 0.5);">RGBA</h1>
+    <h1 style="background-color:hsla(8, 57%, 47%, 0.5);">HSLA</h1>
+
+</body>
+
+</html>
