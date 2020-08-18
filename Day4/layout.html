@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    header{
+        background-color: rgba(32, 171, 226, 0.856);
+        padding: 10px;
+        text-align:center;
+        font-size: 15px;
+        color: white;
+    }
+    /* 16px = 1em */
+
+    nav{
+        float: left;
+        width: 20%;
+        height: 590px;
+        background: tomato;
+        padding: 20px;
+    }
+
+    nav ul{
+        list-style-type: none;
+        padding: 10px;
+    }
+
+    article{
+        float: left;
+        padding: 20px;
+        width: 80%;
+        background-color: rgb(196, 230, 9);
+        height: 590px;
+    }
+    section::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    footer{
+        background-color:rgba(32, 171, 226, 0.856);
+        padding: 10px;
+        text-align: center;
+        color: white;
+    }
+
+    li{
+        padding: 10px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Demo App</h2>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="page1.html">Page One</a></li>
+                <li><a href="page2.html">Page Two</a></li>
+                <li><a href="page3.html">Page Three</a></li>
+                <li><a href="page4.html">Page Four</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h1>Demo App</h1>
+            <p>
+                This is demo application of layouts.
+            </p>
+        </article>
+    </section>
+    <footer>
+        <p>This is demo footer</p>
+    </footer>
+</body>
+</html>
