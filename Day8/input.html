@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <title>JQuery</title>
+    <script>
+        /* function getAlert() {
+             var email = document.getElementById('email').value;
+             var filrstName = document.getElementById('filrstName').value;
+             alert(email + '' + filrstName);
+         }
+ */
+        $(document).ready(function () {
+
+            $('submitForm').click(
+                function () {
+                    console.log("hello");
+                }
+            );
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <label for="email">Enter Email</label>
+            <input name="email" type="email" id="email">
+            <br>
+            <label for="firstName">Enter FirstName</label>
+            <input name="firstName" type="text" class="firstName" required>
+            <br>
+            <input type="submit" id="submitForm">
+        </form>
+    </div>
+</body>
+
+</html>
