@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Registration Pages</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script>
+        /*  document.cookie = "username=likith@yahoo.com;";
+          sessionStorage.setItem('username', 'likth@gmail.com');
+          localStorage.setItem('username', 'likth@aol.com');
+          console.log("cookie : " + document.cookie);
+          console.log("sessionStorage : " + sessionStorage.getItem('username'));
+          console.log("localStorage : " + localStorage.getItem('username'));*/
+    </script>
+</head>
+
+<body>
+    <!--Use .container-fluid for a full width container, spanning the entire width of the viewport.-->
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Our App Name</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        <!--To create a row-->
+        <div class="row" style="padding-top: 10px;">
+            <!--to create to equal columns-->
+            <div class="col">
+                <div class="card">
+                    <div class="card-header bg-success">
+                        Login Here
+                    </div>
+                    <div class="card-body">
+                        <form onsubmit="return checkLogin(this)">
+                            <div class="form-group">
+                                <label for="exampleInputEmail">Email*</label>
+                                <input type="email" class="form-control" id="exampleInputEmail"
+                                    aria-describedby="emailHelp" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword">Password*</label>
+                                <input type="password" class="form-control" id="exampleInputPassword" required>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header bg-info">Sign Up</div>
+                    <div class="card-body">
+                        <form onsubmit="return checkPassword(this)">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" required>
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                    anyone
+                                    else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="mobile">Mobile No</label>
+                                <input type="text" class="form-control" id="mobile" name="mobile" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" minlength="10"
+                                    maxlength="15" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select class="form-control" id="gender" name="gender" required>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    name="exampleInputPassword1" required minlength="10" maxlength="15">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword2">Confirm Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword2"
+                                    name="exampleInputPassword2" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="signUp">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
+                <div class="toast" style="position: absolute; top: 0; right: 0;"  data-delay="10000">
+                    <div class="toast-header">
+                        <strong class="mr-auto">Welcome User</strong>
+                        <small>0 mins ago</small>
+                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="toast-body">
+                        Hello, User! You are successfully registerd. Please login with your credentials.
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script>
+    /*
+    A password is correct if it contains:
+
+At least 1 uppercase character.
+At least 1 lowercase character.
+At least 1 digit.
+At least 1 special character.
+Minimum 8 characters.
+    */
+
+    function checkLogin(form) {
+        alert("coming here");
+        var email = form.exampleInputEmail.value;
+        var password = form.exampleInputPassword.value;
+        var userObj = JSON.parse(sessionStorage.getItem(email));
+
+        if (userObj.email == email) {
+            alert('valide user');
+            //window.location.replace('http://127.0.0.1:5500/Day13/profile.html');
+            window.location.replace('profile.html');
+        } else {
+            alert('not valide user');
+            //window.location.replace('http://127.0.0.1:5500/Day13/error.html');
+            window.location.replace('error.html');
+        }
+    }
+
+
+    function checkPassword(form) {
+        var password = form.exampleInputPassword1.value;
+        var confirmPassword = form.exampleInputPassword2.value;
+        var firstName = form.firstName.value;
+        var lastName = form.lastName.value;
+        var email = form.exampleInputEmail1.value;
+        var mobile = form.mobile.value;
+        var username = form.username.value;
+        var gender = form.gender.value;
+        if (password == confirmPassword) {
+            if (password.match(/[a-z]/g) && password.match(
+                /[A-Z]/g) && password.match(
+                    /[0-9]/g) && password.match(
+                        /[^a-zA-Z\d]/g) && password.length >= 10) {
+                alert('Password is perfect');
+
+                var userInfo = {};
+                userInfo.firstName = firstName;
+                userInfo.lastName = lastName;
+                userInfo.password = password;
+                userInfo.confirmPassword = confirmPassword;
+                userInfo.email = email;
+                userInfo.mobile = mobile;
+                userInfo.username = username;
+                userInfo.gender = gender;
+
+                sessionStorage.setItem(email, JSON.stringify(userInfo));
+                $('.toast').toast('show');
+
+            }
+            else {
+                alert('Password not having required pattern');
+            }
+
+            document.cookie = "password = " + password;
+            sessionStorage.setItem('password', password);
+            localStorage.setItem('password', password);
+        }
+        else if (password != confirmPassword) {
+            alert('Passwords Do Not Match');
+        
+        }
+        else {
+            alert('Password Not Accepted or Site Malfunction');
+           
+        }
+    }
+
+</script>
+
+</html>

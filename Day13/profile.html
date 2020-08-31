@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ui Training Application</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script>
+        document.cookie = "username=likith@yahoo.com;";
+        sessionStorage.setItem('username', 'likth@gmail.com');
+        localStorage.setItem('username', 'likth@aol.com');
+        console.log("cookie : " + document.cookie);
+        console.log("sessionStorage : " + sessionStorage.getItem('username'));
+        console.log("localStorage : " + localStorage.getItem('username'));
+    </script>
+</head>
+
+<body>
+    <!--Use .container-fluid for a full width container, spanning the entire width of the viewport.-->
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Ui Training Application</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        <!--To create a row-->
+        <div class="row" style="padding-top: 10px;">
+            <!--to create to equal columns-->
+            <div class="col-xs-4 col-sm-4 col-md-6 col-lg-3" style="padding: 10px;">
+                <h2>Likith Doe</h2>
+                <p>Please find you profile information</p>
+                <div class="card" style="width:auto">
+                    <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:auto;height:auto">
+                    <div class="card-body">
+                        <h4 class="card-title">Likith Doe</h4>
+                        <p class="card-text">Some example text some example text. Likith Doe is an architect and engineer
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-8 col-sm-8 col-md-6 col-lg-9" style="padding: 10px;">
+                <div class="card">
+                    <div class="card-header bg-primary">Profile</div>
+                    <div class="card-body">
+                        <form onsubmit="return checkPassword(this)">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName" value="Jone"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName" value="doe"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" value="jone@doe.com" required>
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                    anyone
+                                    else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="mobile">Mobile No</label>
+                                <input type="text" class="form-control" id="mobile" name="mobile" value="7207455198"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" minlength="10"
+                                    maxlength="15" value="jonedoe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dob">Date Of Birth</label>
+                                <input type="date" class="form-control" id="dob" name="dob" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select class="form-control" id="gender" name="gender" required>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword2"
+                                    name="exampleInputPassword2" value="1234567890" required minlength="10"
+                                    maxlength="15">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Confirm Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword3"
+                                    name="exampleInputPassword3" value="1234567890" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="update">Update</button>
+                            <button type="reset" class="btn btn-primary" id="cancel">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script>
+    /*
+    A password is correct if it contains:
+
+At least 1 uppercase character.
+At least 1 lowercase character.
+At least 1 digit.
+At least 1 special character.
+Minimum 8 characters.
+    */
+    function checkPassword(form) {
+        var password = form.exampleInputPassword2.value;
+        alert(password);
+        var confirmPassword = form.exampleInputPassword3.value;
+        alert(confirmPassword);
+        if (password == confirmPassword) {
+
+            if (password.match(/[a-z]/g) && password.match(
+                /[A-Z]/g) && password.match(
+                    /[0-9]/g) && password.match(
+                        /[^a-zA-Z\d]/g) && password.length >= 10) {
+                alert('Password is perfect');
+            }
+            else {
+                alert('Password not having required pattern');
+            }
+
+            document.cookie = "password = " + password;
+            sessionStorage.setItem('password', password);
+            localStorage.setItem('password', password);
+        }
+        else if (password != confirmPassword) {
+            alert('Passwords Do Not Match');
+        }
+        else {
+            alert('Password Not Accepted or Site Malfunction');
+        }
+    }
+
+</script>
+
+</html>
