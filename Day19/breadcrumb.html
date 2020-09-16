@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Badges</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav aria-label="Page breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page"><a href="#">Order</a></li>
+                <li class="breadcrumb-item">Checkout</li>
+                <li class="breadcrumb-item">Payments</li>
+            </ol>
+        </nav>
+
+
+        <hr>
+
+        <ul class="list-group">
+            <li class="list-group-item active">Item</li>
+            <li class="list-group-item">Item 2</li>
+            <li class="list-group-item">Item 3</li>
+            <li class="list-group-item">Item 4</li>
+            <li class="list-group-item"><a href="#">Item 5</a></li>
+        </ul>
+
+        <hr>
+
+        <button class="btn btn-primary" data-target="#my-collapse" data-toggle="collapse" aria-expanded="false"
+            aria-controls="my-collapse">Text</button>
+        <div id="my-collapse" class="collapse">
+          
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Title</h5>
+                    <p class="card-text">Content</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <div class="card">
+            <div class="card-header">
+                <a class="card-link" data-toggle="collapse" href="#colap1">Collapse One</a>
+            </div>
+            <div class="card-body" id="colap1">
+                <h5 class="card-title">Title</h5>
+                <p class="card-text">Content</p>
+            </div>
+        </div>
+     
+    </div>
+</body>
+
+</html>
