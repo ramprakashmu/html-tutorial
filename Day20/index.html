@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Model Example</title>
+    <script>
+        $(document).ready(function () {
+            $('.toast').toast({ delay: 2000 });
+            $('.toast').toast('show');
+        });
+    </script>
+</head>
+
+<body>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#my-modal0">Modal Form Example
+        Button</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#my-modal1">Modal Table Example
+        Button</button>
+    <br>
+    <h1>Toast</h1>
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="mr-auto">Toast Title</strong>
+            <small>Note</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body">
+            Hi I am toast
+        </div>
+    </div>
+
+    <br>
+    <h1>Tabs</h1>
+    <nav class="nav nav-tabs">
+        <li class="nav-item">
+            <!-- <a class="nav-link active" href="#hom/..e" data-toggle="tab">Tab One</a> -->
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#tab2" data-toggle="tab">Tab Two</a>
+        </li>
+    </nav>
+
+    <!--Tab Panes content-->
+    <div class="tab-content">
+        <div class="tab-pane container active" id="home">
+            <h1>Hi I am tab One</h1>
+        </div>
+        <div  class="tab-pane container fade" id="tab2">
+            <h1>Hi I am tab two</h1>
+        </div>
+    </div>
+
+    <div id="my-modal0" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>We can use it for ... to show...</p>
+                    <h5>Forms</h5>
+                    <form>
+                        <input type="text" value="" placeholder="username">
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="my-modal1" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>We can use it for ... to show...</p>
+                    <h5>Tables</h5>
+                    <table>
+                        <thead>
+                            <th>S.No</th>
+                            <th>Name</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    1000
+                                </td>
+                                <td>
+                                    Likith
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
