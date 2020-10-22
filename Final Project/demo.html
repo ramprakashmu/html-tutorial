@@ -50,6 +50,11 @@
             text-align: center;
             padding: 50px;
         }
+
+        .imageHeight {
+            width: 300px !important;
+            height: 300px !important;
+        }
     </style>
 </head>
 
@@ -93,9 +98,28 @@
         <div class="row">
             <div id="about" class="container-fluid box-padding"
                 style=" border-radius: 15px;     background: aliceblue;">
+
+                <div class="row">
+                    <h3 style="padding-left: 10px;">About Me</h3>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item"
+                                src="https://naf.org/news_articles/lenovo-and-naf-announce-2020-lenovo-scholar-network-fan-favorite-mobile-app"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item"
+                                src="https://www.wral.com/sports-injury-app-is-enloe-s-other-winner-in-lenovo-development-challenge/19178394/"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
                 <div class="row">
                     <div class="col-sm-8">
-                        <h2>About Me</h2><br>
                         <h4>Full Stack Developer</h4><br>
                         <p>I always try to give my best performance at the workplace and like to receive challenging
                             task with a smile and providing solutions with the mind. My strengths are, I am a team
@@ -123,28 +147,28 @@
                 <div class="row text-center slideanim">
                     <div class="col-sm-3">
                         <div class="thumbnail">
-                            <img src="html.png" alt="Paris" width="400" height="300">
+                            <img class="img-thumbnail imageHeight" src="html.png" alt="Paris">
                             <p><strong>HTML5</strong></p>
                             <p>Strong Knowledge</p>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="thumbnail">
-                            <img src="css.png" alt="New York" width="400" height="300">
+                            <img class="img-thumbnail imageHeight" src="css.png" alt="New York">
                             <p><strong>CSS</strong></p>
                             <p>Strong Knowledge</p>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="thumbnail">
-                            <img src="javascript.png" alt="San Francisco" width="400" height="300">
+                            <img class="img-thumbnail imageHeight" src="javascript.png" alt="San Francisco">
                             <p><strong>Java Script</strong></p>
                             <p>Strong Knowledge</p>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="thumbnail">
-                            <img src="bootstrap.png" alt="San Francisco" width="400" height="300">
+                            <img class="img-thumbnail imageHeight" src="bootstrap.png" alt="San Francisco">
                             <p><strong>Bootstrap 4</strong></p>
                             <p>Strong Knowledge</p>
                         </div>
@@ -183,7 +207,8 @@
                     </a>
                 </div>
             </div>
-            <div id="blog" class="container-fluid box-padding"  style="background: rgba(0,0,0,.075); border-radius: 15px;">
+            <div id="blog" class="container-fluid box-padding"
+                style="background: rgba(0,0,0,.075); border-radius: 15px;">
                 <h2>Popular Blogs</h2>
                 <div class="card-columns">
                     <div class="card bg-primary">
@@ -201,22 +226,29 @@
                             <p class="card-text"><a href="#" style="color: blanchedalmond;">Blog Three</a></p>
                         </div>
                     </div>
-                    <div class="card bg-danger">
-                        <div class="card-body text-center">
-                            <p class="card-text"><a href="#" style="color: blanchedalmond;">Blog Four</a></p>
-                        </div>
-                    </div>
-                    <div class="card bg-light">
-                        <div class="card-body text-center">
-                            <p class="card-text"><a href="#" style="color: blue;">Blog Five</a></p>
-                        </div>
-                    </div>
-                    <div class="card bg-info">
-                        <div class="card-body text-center">
-                            <p class="card-text"><a href="#" style="color: blanchedalmond;">Blog Six</a></p>
-                        </div>
-                    </div>
                 </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2>Post Your Blog</h2>
+                        <form action="/action_page.php">
+                            <div class="form-group">
+                                <label for="usr">Title:</label>
+                                <input type="text" class="form-control" id="usr" name="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Subtitle:</label>
+                                <input type="password" class="form-control" id="pwd" name="password">
+                            </div>
+                            <div class="form-group">
+                                <label for="comment">Content:</label>
+                                <textarea class="form-control" rows="8" id="comment"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Post Blog</button>
+                        </form>
+                    </div>
+
+                </div>
+
             </div>
             <div id="contact" class="container-fluid box-padding">
                 <h2>Contact / Hire Me</h2>
@@ -269,9 +301,13 @@
 
                     </div>
                     <div class="col-sm-6">
-                        <iframe
+                        <!--<iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d112061.09262729759!2d77.208022!3d28.632485!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x644e33bc3def0667!2sIndior+Tours+Pvt+Ltd.!5e0!3m2!1sen!2sus!4v1527779731123"
-                            width="100%" height="650px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            width="100%" height="650px" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+
+                        <iframe
+                            src="https://calendar.google.com/calendar/embed?title=My%20Schedule%20For%20Month&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=8d3fc8l9g04n7r9im45fsn08ak%40group.calendar.google.com&amp;color=%238D6F47&amp;ctz=America%2FNew_York"
+                            style="border-width:0" width="100%" height="650px" frameborder="0" scrolling="no"></iframe>
                     </div>
                 </div>
             </div>
